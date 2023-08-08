@@ -1,11 +1,4 @@
-/*Mi idea es hacer un carrito de compras
-1- que ingrese con el usuario  y pin. que permita 3 veces intentar.
-2- que muestre producto con su precio y poder elegir uno.
-que elijas la forma de pago 
-    - Efectivo el  precio el es  mismo sin ningun recargo
-    - Debito / transferencia   5% de recargo 
-    - Credito 10% de recargo 
-    mostrar "Gracias por su compra + usuario . El total es de + total" */
+
 
 let usuario = "carla1";
 let pin = "12345";
@@ -61,9 +54,10 @@ if (ingresar) {
                 break;
 
         }
+        
         productos = prompt(
             "Elegí un producto: \n1-Campera argentina.  \n2 - Pantalon de boca. \n3 - Zapatillas nike. ");
-    
+
     
     
 
@@ -106,9 +100,10 @@ function plandePago(precio, producto) {
 
 
     }
+    alert(" Gracias por tu compra " + usuario);
     
 }
-alert(" Gracias por tu compra " + usuario);
+
 }
 else{
     alert("Cuenta suspendida por 5 dias.");
