@@ -1,5 +1,3 @@
-
-
 /*Mi idea es hacer un carrito de compras
 1- que ingrese con el usuario  y pin. que permita 3 veces intentar.
 2- que muestre producto con su precio y poder elegir uno.
@@ -65,12 +63,9 @@ if (ingresar) {
         }
         productos = prompt(
             "Elegí un producto: \n1-Campera argentina.  \n2 - Pantalon de boca. \n3 - Zapatillas nike. ");
-    }
     
-    else{
-        alert("Cuenta suspendida por 5 dias.");
-        
-    }
+    
+    
 
 function plandePago(precio, producto) {
     let total;
@@ -111,12 +106,14 @@ function plandePago(precio, producto) {
 
 
     }
-    alert(" Gracias por tu compra " + usuario);
     
 }
-
-
-plandePago()
+alert(" Gracias por tu compra " + usuario);
+}
+else{
+    alert("Cuenta suspendida por 5 dias.");
+    
+}
 
 
 
