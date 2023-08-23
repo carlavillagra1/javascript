@@ -1,4 +1,4 @@
-
+/*
 let usuario = "carla1";
 let pin = "12345";
 let ingresar = false;
@@ -99,13 +99,82 @@ if (ingresar) {
 } else {
     alert("Cuenta suspendida por 5 dias.");
 }
+*/
 
 
 
+let usuario = "carla1";
+let pin = "12345";
+let ingresar = false;
+
+function ingreso() {
+    for (let i = 2; i >= 0; i--) {
+        let ingresoUSER = prompt("Ingresa tu usuario");
+        let ingresoPIN = prompt("Ingresa tu PIN");
+
+        if (ingresoUSER == usuario && ingresoPIN == pin) {
+            alert("Bienvenida " + usuario);
+            ingresar = true;
+            break;
+        } else {
+            alert("Error este usuario no existe");
+        }
+    }
+}
 
 
+const productos = [
+    {
+        id: 1,
+        nombre: "Campera de boca",
+        talle: "M",
+        estado: "Usado/como nuevo",
+        medidas: "75cm ancho , 50cm largo",
+        precio: 7500,
+        categoria: "Club",
+    },
+
+    {
+        id: 2,
+        nombre: "Pantalon brasil",
+        talle: "L",
+        estado: "Nuevo",
+        medidas: "54cm ancho , 70cm largo",
+        precio: 12000,
+        categoria: "Club",
+
+    },
+
+    {
+        id: 3,
+        nombre: "Visera polo ralph",
+        estado: "Usado",
+        detalles: "Los abrojos se desgastaron",
+        precio: 6500,
+        categoria: "Vintage",
+    },
+
+    {
+        id: 4,
+        nombre: "Chaleco nike",
+        talle: "S",
+        estado: "Usado/como nuevo",
+        medidas: "50cm ancho , 60cm largo",
+        precio: 1500,
+        categoria: "Deportivo",
+    }
+
+]
 
 
+let encontrado = parseInt(prompt('Ingrese el id del producto'))
+
+const productoFiltrado= productos.find((el)=> el.id == encontrado)
+
+alert('Resultado de tu busqueda' + JSON.stringify(productoFiltrado))
+
+
+ingreso();
 
 
 
