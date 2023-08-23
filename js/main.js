@@ -20,7 +20,7 @@ function ingreso() {
 
 function realizarCompra() {
     let productos = prompt(
-        "Elegi un producto: \n1- Campera argentina. \n2- Pantalon de boca. \n3- Zapatillas nike. "
+        "Elegi un producto: \n1- Campera argentina. \n2- Pantalon de boca. \n3- Visera lacoste. "
     );
 
     switch (productos) {
@@ -37,9 +37,9 @@ function realizarCompra() {
             break;
 
         case "3":
-            let zapatilla = 9500;
-            alert("El precio de las zapatillas es " + zapatilla);
-            plandePago(9500, " Zapatillas nike ");
+            let visera = 9500;
+            alert("El precio de la visera es " + visera);
+            plandePago(9500, " Visera lacoste ");
             break;
 
         default:
@@ -84,102 +84,57 @@ function plandePago(precio, producto) {
     }
 
     
-    if (confirm("Gracias por tu compra " + usuario + ". ¿Deseas realizar otra compra?")) {
-        realizarCompra();
+    if (confirm("Gracias por tu compra " + usuario + ". ¿Deseas ver nuestros proximos lanzamientos?")) {
+        proximoLanzamiento();
     } else {
         
         alert("Gracias por tu compra. ¡Hasta pronto!");
     }
 }
 
-ingreso();
+
 
 if (ingresar) {
     realizarCompra();
 } else {
     alert("Cuenta suspendida por 5 dias.");
 }
-
-
-
-/*
-let usuario = "carla1";
-let pin = "12345";
-let ingresar = false;
-
-function ingreso() {
-    for (let i = 2; i >= 0; i--) {
-        let ingresoUSER = prompt("Ingresa tu usuario");
-        let ingresoPIN = prompt("Ingresa tu PIN");
-
-        if (ingresoUSER == usuario && ingresoPIN == pin) {
-            alert("Bienvenida " + usuario);
-            ingresar = true;
-            break;
-        } else {
-            alert("Error este usuario no existe");
-        }
-    }
-}
-
-
-const productos = [
-    {
-        id: 1,
-        nombre: "Campera de boca",
-        talle: "M",
-        estado: "Usado/como nuevo",
-        medidas: "75cm ancho , 50cm largo",
-        precio: 7500,
-        categoria: "Club",
-    },
-
-    {
-        id: 2,
-        nombre: "Pantalon brasil",
-        talle: "L",
-        estado: "Nuevo",
-        medidas: "54cm ancho , 70cm largo",
-        precio: 12000,
-        categoria: "Club",
-
-    },
-
-    {
-        id: 3,
-        nombre: "Visera polo ralph",
-        estado: "Usado",
-        detalles: "Los abrojos se desgastaron",
-        precio: 6500,
-        categoria: "Vintage",
-    },
-
-    {
-        id: 4,
-        nombre: "Chaleco nike",
-        talle: "S",
-        estado: "Usado/como nuevo",
-        medidas: "50cm ancho , 60cm largo",
-        precio: 1500,
-        categoria: "Deportivo",
-    }
-
-]
-
-
-let encontrado = parseInt(prompt('Ingrese el id del producto'))
-
-const productoFiltrado= productos.find((el)=> el.id == encontrado)
-
-alert('Resultado de tu busqueda' + JSON.stringify(productoFiltrado))
-
-
 ingreso();
 
 
+function proximoLanzamiento(){
 
-*/
+    let mostrarCategoria = prompt("¿De de categoria te gustaria ver el proximo lanzamiento?");
 
+const categorias = [
+    {
+        nombre:"Campera de river dama",
+        categoria:"dama",
+    },
+
+    { 
+        nombre:"Conjunto de racing",
+        categoria:"deportivo",
+
+    },
+
+    {
+        nombre:" Visera polo ralph",
+        categoria:"vintage",
+    },
+
+    {
+        nombre:"zapatillas adidas",
+        categoria:"caballero",
+    }
+
+]   
+    const categoriaFind = categorias.find ((el)=> el.categoria == mostrarCategoria.nombre);
+
+    alert('Resultado del proximo lanzamiento es' + JSON.stringify(categoriaFind));
+
+} 
+proximoLanzamiento();
 
 
 
