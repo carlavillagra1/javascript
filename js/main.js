@@ -1,4 +1,4 @@
-/*
+
 let usuario = "carla1";
 let pin = "12345";
 let ingresar = false;
@@ -99,10 +99,10 @@ if (ingresar) {
 } else {
     alert("Cuenta suspendida por 5 dias.");
 }
-*/
 
 
 
+/*
 let usuario = "carla1";
 let pin = "12345";
 let ingresar = false;
@@ -178,7 +178,7 @@ ingreso();
 
 
 
-
+*/
 
 
 
